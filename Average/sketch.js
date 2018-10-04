@@ -35,7 +35,7 @@ function draw() {
     drawGraph(mapy2, 'rgba(0,255,0,0.5)');
     drawGraph(mapy3, 'rgba(255,204,0,0.5)');
     drawGraph(mapy4, 'rgba(255,204,200,0.5)');
-    drawGraph(mapy5, 'rgba(100,204,255,0.5)');
+    drawGraph(mapy5, 'rgba(100,204,255,1)');
     drawGraph(mapy0, 'rgba(255,0,0,1)');
     drawAvgsVals(avgs);
 }
