@@ -99,8 +99,8 @@ function draw() {
 	}
 	if(iteration === maxIterations || !bContinue){
 		console.log('iterations', iteration);
-		console.log(chosenMatrix);
-		console.log('ph', pheromones);
+		console.log('route matrix',chosenMatrix);
+		console.log('final pheromone', pheromones);
 	}
 	
 }
