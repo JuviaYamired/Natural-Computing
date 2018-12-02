@@ -1,8 +1,8 @@
-var w = 2;
+var w = 10;
 var cells;
 
 var generation = 0;
-var maxGeneration = 255;
+var maxGeneration = 30;
 var ruleset = [0, 1, 0, 1, 1, 0, 1, 0];
 
 function setup() {
