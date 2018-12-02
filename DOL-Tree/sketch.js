@@ -1,4 +1,9 @@
 var rate = 60; //Speed
+
+//Activate activity3 angle calculation
+var activity3 = true;
+
+//False activate unexpected effect
 var normalEffect = true;
 var angle = 90;
 var stateStack = [];
@@ -56,6 +61,7 @@ function draw() {
         replaceProductions();        
     }
     else{
+        
         clear();
         stateStack = [];
         posX = defaultX;
@@ -82,6 +88,7 @@ function draw() {
         for(var i = 0; i < figString.length; ++i){
             parse(i);
         }
+        
     }
     it++;
 }
@@ -89,10 +96,20 @@ function draw() {
 function parse(it){
     switch (figString[it]) {
         case 'F':
-            F(posX, posY, angle);
+            if(activity3){
+                F(posX, posY, angle + ((stateStack.length)/0.100) );
+            }
+            else{
+                F(posX, posY, angle);
+            }
             break;
         case 'G':
-            G(posX, posY, angle);
+            if(activity3){
+                G(posX, posY, angle + ((stateStack.length)/0.100) );
+            }
+            else{
+                G(posX, posY, angle);
+            }
             break;
         case '+':
             increaseAngle();
